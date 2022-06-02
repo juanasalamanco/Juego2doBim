@@ -4,23 +4,24 @@ using UnityEngine;
 
 public class DeathwallScript : MonoBehaviour
 {
-    // Start is called before the first frame update
     void Start()
     {
         
     }
 
-    // Update is called once per frame
     void Update()
     {
         
     }
-
+    
     void OnCollisionEnter(Collision col)
     {
+        
         if (col.gameObject.name == "deathwall")
         {
             gameObject.transform.position = new Vector3(0,.5f,-9.5f);
         }
+        
     }
+    
 }
