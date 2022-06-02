@@ -20,7 +20,7 @@ public class DeathwallScript : MonoBehaviour
     {
         if (col.gameObject.name == "deathwall")
         {
-            Destroy(gameObject);
+            gameObject.transform.position = new Vector3(0,.5f,-9.5f);
         }
     }
 }

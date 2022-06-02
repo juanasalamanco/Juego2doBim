@@ -20,6 +20,9 @@ public class MovimientoPersonaje : MonoBehaviour
     
     void Update()
     {
+
+        transform.eulerAngles = (new Vector3(0, 0, 0));
+
         if (Input.GetKey(KeyCode.W))
         {
             transform.Translate(0, 0, movementSpeed);
@@ -28,16 +31,16 @@ public class MovimientoPersonaje : MonoBehaviour
         {
             transform.Translate(0, 0, -movementSpeed);
         }
-        if (Input.GetKey(KeyCode.A) && hasJump == maxJump)
+        if (Input.GetKey(KeyCode.A))
         {
             transform.Translate(-movementSpeed, 0, 0);
         }
-        if (Input.GetKey(KeyCode.D) && hasJump == maxJump)
+        if (Input.GetKey(KeyCode.D))
         {
             transform.Translate(movementSpeed, 0, 0);
         }
 
-        if (Input.GetKey(KeyCode.Space) && hasJump>0)
+        if (Input.GetKeyDown(KeyCode.Space) && hasJump>=0)
         {
             rb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
             hasJump--;

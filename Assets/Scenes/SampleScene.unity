@@ -312,7 +312,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 387083835}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -543,7 +543,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 489124653}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.5, z: -9.4}
+  m_LocalPosition: {x: 0, y: 0.5, z: -9.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 828941905}
@@ -564,7 +564,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   movementSpeed: 0.3
   rotationSpeed: 0
-  jumpForce: 14
+  jumpForce: 20
   maxJump: 2
 --- !u!54 &489124659
 Rigidbody:
@@ -620,7 +620,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 828941904}
   m_LocalRotation: {x: 0.11133027, y: -0, z: -0, w: 0.9937835}
-  m_LocalPosition: {x: 0, y: 2.48, z: -4.4400005}
+  m_LocalPosition: {x: 0, y: 2.65, z: -5.17}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 489124657}
