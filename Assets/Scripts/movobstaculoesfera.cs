@@ -2,40 +2,32 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MovObs2 : MonoBehaviour
+public class movobstaculoesfera : MonoBehaviour
 {
-    public float MovementObs;
     bool IsRight = true;
+    public float MovSpeed;
 
+    // Start is called before the first frame update
     void Start()
     {
-
         
     }
 
     // Update is called once per frame
     void Update()
     {
-       /*
+        gameObject.transform.Translate(MovSpeed, 0, 0);
 
         if (transform.position.x <= 3.75f)
         {
             IsRight = false;
+            transform.Translate(MovSpeed, 0, 0);
         }
-        else if (transform.position.x >= 3.75f)
+        if (transform.position.x >= -3.75f)
         {
             IsRight = true;
+            transform.Translate(-MovSpeed, 0, 0);
         }
 
-        if (!IsRight)
-        {
-            transform.Translate(3.85f, 0, 0);
-        }
-        
-        if (IsRight)
-        {
-            transform.Translate(-3.85f, 0, 0);
-        }
-        */
     }
 }
