@@ -9,46 +9,25 @@ public class MovObs2 : MonoBehaviour
 
     void Start()
     {
-
         
     }
 
-    // Update is called once per frame
     void Update()
     {
-        /*
+        gameObject.transform.Translate(-MovementObs, 0, 0);
 
-         if (transform.position.x <= 3.75f)
-         {
-             IsRight = false;
-         }
-         else if (transform.position.x >= 3.75f)
-         {
-             IsRight = true;
-         }
-
-         if (!IsRight)
-         {
-             transform.Translate(3.85f, 0, 0);
-         }
-
-         if (IsRight)
-         {
-             transform.Translate(-3.85f, 0, 0);
-         }
-         */
-
-        gameObject.transform.Translate(MovementObs, 0, 0);
-
-        if (transform.position.x <= 3.75f)
+        if (transform.position.x >= 3.75f)
         {
             IsRight = false;
             transform.Translate(-MovementObs, 0, 0);
         }
-        else if (transform.position.x >= 3.75f)
+        else if (transform.position.x <= -3.75f)
         {
             IsRight = true;
             transform.Translate(MovementObs, 0, 0);
         }
+
+
+        
     }
 }

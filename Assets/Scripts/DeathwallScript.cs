@@ -22,6 +22,10 @@ public class DeathwallScript : MonoBehaviour
             gameObject.transform.position = new Vector3(0,.5f,-9.5f);
         }
         
+        if(col.gameObject.name == "pisoMuerte")
+        {
+            gameObject.transform.position = new Vector3(0, .5f, -9.5f);
+        }
     }
     
 }
