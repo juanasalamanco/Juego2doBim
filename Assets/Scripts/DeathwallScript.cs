@@ -36,7 +36,7 @@ public class DeathwallScript : MonoBehaviour
             gameObject.transform.position = new Vector3(0, .5f, -9.5f);
         }
 
-        while (col.gameObject.name == "CuboParaGanar")
+        if(col.gameObject.name == "CuboParaGanar")
         {
             GameObject clon;
             for (int i = 0; i < clones; i++)
