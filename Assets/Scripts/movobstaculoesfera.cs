@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class movobstaculoesfera : MonoBehaviour
 {
-    bool IsRight = true;
+    bool ToRight = true;
     public float MovSpeed;
 
     // Start is called before the first frame update
@@ -15,43 +15,25 @@ public class movobstaculoesfera : MonoBehaviour
 
     // Update is called once per frame
     void Update()
-    {
-        //gameObject.transform.Translate(MovSpeed, 0, 0);
+    {    
 
-        if (transform.position.x <= 3.75f)
+        if (ToRight == true)
         {
-            IsRight = false;
-            transform.Translate(MovSpeed, 0, 0);
+            transform.position += new Vector3(MovSpeed, 0, 0);
         }
-        else if (transform.position.x >= -3.75f)
+        else
         {
-            IsRight = true;
-            transform.Translate(-MovSpeed, 0, 0);
+            transform.position -= new Vector3(MovSpeed, 0, 0);
         }
-
 
         if (transform.position.x >= 3.75f)
         {
-            IsRight = true;
-            transform.Translate(-MovSpeed, 0, 0);
+            ToRight = false;
         }
         else if (transform.position.x <= -3.75f)
         {
-            IsRight = false;
-            transform.Translate(MovSpeed, 0, 0);
+            ToRight = true;
         }
-
-        /*
-        if (!IsRight)
-        {
-            transform.Translate(MovSpeed, 0, 0);
-        }
-        else if (IsRight)
-        {
-            
-            transform.Translate(-MovSpeed, 0, 0);
-        }
-        */
 
     }
 }
