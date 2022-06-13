@@ -17,7 +17,7 @@ public class MovimientoPersonaje : MonoBehaviour
         hasJump = maxJump;
         rb = GetComponent<Rigidbody>();
     }
-    
+
     void Update()
     {
 
@@ -40,7 +40,7 @@ public class MovimientoPersonaje : MonoBehaviour
             transform.Translate(movementSpeed, 0, 0);
         }
 
-        if (Input.GetKeyDown(KeyCode.Space) && hasJump>=0)
+        if (Input.GetKeyDown(KeyCode.Space) && hasJump >= 0)
         {
             rb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
             hasJump--;
@@ -49,10 +49,15 @@ public class MovimientoPersonaje : MonoBehaviour
 
     void OnCollisionEnter(Collision col)
     {
-        if(col.gameObject.tag == "ground")
+        if (col.gameObject.tag == "ground")
         {
             hasJump = maxJump;
         }
+
+        if (col.gameObject.name == "CuboParaGanar")
+        {
+            gameObject.transform.position = new Vector3(0, .5f, -9.5f);
+        } 
     }
     
 }
