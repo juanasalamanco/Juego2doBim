@@ -6,6 +6,7 @@ public class boton : MonoBehaviour
 {
     public GameObject Cubo;
     public GameObject Boton;
+    public GameObject TextoGanar;
     // Start is called before the first frame update
     void Start()
     {
@@ -21,5 +22,6 @@ public class boton : MonoBehaviour
     {
         Cubo.transform.position = new Vector3(0, .5f, -9.5f);
         Boton.SetActive(false);
+        TextoGanar.SetActive(false);
     }
 }

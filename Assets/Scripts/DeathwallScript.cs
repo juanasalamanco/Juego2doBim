@@ -8,6 +8,7 @@ public class DeathwallScript : MonoBehaviour
     public int grados;
     public int clones;
     public GameObject Button;
+    public GameObject textoganar;
 
     void Start()
     {
@@ -58,6 +59,8 @@ public class DeathwallScript : MonoBehaviour
         if (col.gameObject.name == "CuboParaGanar")
         {
             Button.SetActive(true);
+            textoganar.SetActive(true);
+
         }
     }
   
