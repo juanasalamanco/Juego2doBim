@@ -5,7 +5,7 @@ using UnityEngine;
 public class movDeathWall : MonoBehaviour
 {
     public float movementSpeed;
-
+    public GameObject Deathwall;
     void Start()
     {
         

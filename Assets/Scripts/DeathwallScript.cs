@@ -7,6 +7,7 @@ public class DeathwallScript : MonoBehaviour
     public GameObject objectToClone;
     public int grados;
     public int clones;
+    public GameObject Button;
 
     void Start()
     {
@@ -48,6 +49,18 @@ public class DeathwallScript : MonoBehaviour
                 Destroy(clon, 5f);
             }
         }
+
+        if(col.gameObject.name == "Sphere")
+        {
+            gameObject.transform.position = new Vector3(0, .5f, -9.5f);
+        }
+
+        if (col.gameObject.name == "CuboParaGanar")
+        {
+            Button.SetActive(true);
+        }
     }
+  
+    
     
 }

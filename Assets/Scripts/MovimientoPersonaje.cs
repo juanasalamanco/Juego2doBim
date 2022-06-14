@@ -54,10 +54,7 @@ public class MovimientoPersonaje : MonoBehaviour
             hasJump = maxJump;
         }
 
-        if (col.gameObject.name == "CuboParaGanar")
-        {
-            gameObject.transform.position = new Vector3(0, .5f, -9.5f);
-        } 
+        
     }
     
 }

@@ -27,12 +27,13 @@ public class tiempo : MonoBehaviour
         txt_TimeFloored.text = Mathf.Floor(time).ToString();
 
 
-        void OnCollisionEnter(Collision col)
+        
+    }
+    void OnCollisionEnter(Collision col)
+    {
+        if (col.gameObject.name == "CuboParaGanar")
         {
-            if (col.gameObject.name == "CuboParaGanar")
-            {
-                isCounting = false;
-            }
+            isCounting = false;
         }
     }
 }
